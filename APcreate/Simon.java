@@ -2,30 +2,31 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Simon {
-    private String red;
-    private String blue;
-    private String green;
-    private String yellow;
-    int color;
+    private String color;
     public Simon() {
         //oidsafhdsalkjfdsaaaaaaaalkjsdfhlaksdjlfakjdshflkjdsalf
     }
-    
-    public void start() {
-        Scanner scanner = new Scanner(System.in);
-        boolean ongoing = true;
-        while (ongoing == true) {
-            System.out.print("Press spacebar to start...");
-            try {
-                color= scanner.next();
-                
-            } catch (InputMismatchException error) {
-                
-            }
-        }
+    public void generateRandom() {
+        String[]colors;
+        colors = new String[4];
+        colors[0] = "red";
+        colors[1] = "blue";
+        colors[2] = "green";
+        colors[3] = "yellow";
+        int random = (int) (Math.random()*4);
+        System.out.println(colors[random]);
+        this.color = colors[random];
     }
-    
-    public void main(String[]args) {
+    public void go() {
+        boolean shouldGo = true;
+        while (shouldGo == true) {
+            
+        }
         
     }
+    
+    public void main(String args[]) {
+        
+    }
+    
 }
