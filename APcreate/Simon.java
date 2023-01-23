@@ -7,8 +7,7 @@ public class Simon {
         //oidsafhdsalkjfdsaaaaaaaalkjsdfhlaksdjlfakjdshflkjdsalf
     }
     public String generateRandom() {
-        String[]colors;
-        colors = new String[4];
+        String[]colors = new String[4];
         colors[0] = "red";
         colors[1] = "blue";
         colors[2] = "green";
@@ -35,6 +34,7 @@ public class Simon {
         sqnc[13]= generateRandom();
         sqnc[14]= generateRandom();
         sqnc[15]= generateRandom();
+        System.out.println(sqnc);
     }
     public void go() {
         boolean shouldGo = true;
