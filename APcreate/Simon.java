@@ -9,11 +9,7 @@ public class Simon {
         //oidsafhdsalkjfdsaaaaaaaalkjsdfhlaksdjlfakjdshflkjdsalf
     }
     public String generateRandom() {
-        String[]colors = new String[4];
-        colors[0] = "red ";
-        colors[1] = "blue ";
-        colors[2] = "green ";
-        colors[3] = "yellow ";
+        String[]colors = {"red ","blue ","green ", "yellow "};
         int random = (int) (Math.random()*4);
         this.color = colors[random];
         return this.color;
@@ -36,27 +32,21 @@ public class Simon {
         sqnc[13]= generateRandom();
         sqnc[14]= generateRandom();
         sqnc[15]= generateRandom();
-        for(int i = 0; i < sqnc.length; i++) {
-            System.out.println(sqnc[i]);
-        }
         this.sqnc1 = sqnc;
     }
     public void go() {
         boolean shouldGo = true;
-        Scanner scanner = new Scanner(System.in);
-        String line = scanner.nextLine();
-        a = scanner.nextInt();
+        Scanner input = new Scanner(System.in);
         while (shouldGo == true) {
-            for (int i = 0; i < sqnc1.length; i++) {
-                if (a == sqnc1[i]) {
-                    
-                }
+            generateRandomSequence();
+            for (int i = 0; i <= 15; i++) {
+                System.out.println(sqnc1[i]);
             }
         }
         
     }
     
-    public void main(String args[]) {
+    public static void main(String[] args) {
         
     }
     
