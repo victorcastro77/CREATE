@@ -8,6 +8,4 @@ comment3.params=
 comment3.target=void\ generateRandomSequence()
 comment4.params=
 comment4.target=void\ go()
-comment5.params=args
-comment5.target=void\ main(java.lang.String[])
-numComments=6
+numComments=5
