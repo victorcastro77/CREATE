@@ -1,11 +1,9 @@
 #BlueJ class context
 comment0.target=Simon
 comment1.params=
-comment1.target=Simon()
+comment1.target=java.lang.String\ generateRandom()
 comment2.params=
-comment2.target=java.lang.String\ generateRandom()
-comment3.params=
-comment3.target=java.lang.String[]\ generateRandomSequence()
-comment4.params=args
-comment4.target=void\ main(java.lang.String[])
-numComments=5
+comment2.target=java.lang.String[]\ generateRandomSequence()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

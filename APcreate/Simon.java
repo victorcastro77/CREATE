@@ -5,10 +5,6 @@ import java.util.Arrays;
 public class Simon {
     private String color;
     String[] sqnc = new String[16];
-    int a;
-    public Simon() {
-        //oidsafhdsalkjfdsaaaaaaaalkjsdfhlaksdjlfakjdshflkjdsalf
-    }
 
     private String generateRandom() {
         String[]colors = {"red ","blue ","green ","yellow "};
@@ -40,14 +36,17 @@ public class Simon {
     public void main(String[] args) {
         boolean shouldGo = true;
         Scanner input = new Scanner(System.in);
-        int in = input.nextInt();
-        while (shouldGo) {
-            for (int i = 0; i < 16; i++) {
-                a = i;
-            }
-            if (in == a) {
-                
-            }
+        System.out.println("Match the sequence:");
+        while (shouldGo == true) {
+                System.out.println(sqnc[]);
+                System.out.println("Match the pattern: ");
+                if (!input.equals(sqnc[])) {
+                    shouldGo = false;
+                } else if (input.equals(sqnc[spot])) {
+                    System.out.println("Correct!");
+                    System.out.println(sqnc[spot+1]);
+                }
+                System.out.println("/u000C");
         }
     }
 }
