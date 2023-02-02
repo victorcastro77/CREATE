@@ -5,48 +5,48 @@ import java.util.Arrays;
 public class Simon {
     private String color;
     String[] sqnc = new String[16];
-
-    private String generateRandom() {
-        String[]colors = {"red ","blue ","green ","yellow "};
+    private void generateRandom() {
+        String[]colors = new String[4];
+        colors[0] = "r";
+        colors[1] = "b";
+        colors[2] = "g";
+        colors[3] = "y";
         int random = (int) (Math.random()*4);
         this.color = colors[random];
-        return this.color;
+    }
+    public void generateRandomSequence() {
+        sqnc[0] = color;
+        sqnc[1] = color;
+        sqnc[2] = color;
+        sqnc[3] = color;
+        sqnc[4] = color;
+        sqnc[5] = color;
+        sqnc[6] = color;
+        sqnc[8] = color;
+        sqnc[7] = color;
+        sqnc[9] = color;
+        sqnc[10] = color;
+        sqnc[11] = color;
+        sqnc[12] = color;
+        sqnc[13] = color;
+        sqnc[14] = color;
+        sqnc[15] = color;
+        System.out.println(sqnc);
     }
 
-    public String[] generateRandomSequence() {
-        sqnc[0] = generateRandom();
-        sqnc[1] = generateRandom();
-        sqnc[2] = generateRandom();
-        sqnc[3] = generateRandom();
-        sqnc[4] = generateRandom();
-        sqnc[5] = generateRandom();
-        sqnc[6] = generateRandom();
-        sqnc[7] = generateRandom();
-        sqnc[8] = generateRandom();
-        sqnc[9] = generateRandom();
-        sqnc[10] = generateRandom();
-        sqnc[11] = generateRandom();
-        sqnc[12] = generateRandom();
-        sqnc[13] = generateRandom();
-        sqnc[14] = generateRandom();
-        sqnc[15] = generateRandom();
-        return sqnc;
-    }
-
-    public void main(String[] args) {
+    public static void main(String[] args) {
         boolean shouldGo = true;
         Scanner input = new Scanner(System.in);
-        System.out.println("Match the sequence:");
         while (shouldGo == true) {
-                System.out.println(sqnc[]);
+                System.out.println("");
                 System.out.println("Match the pattern: ");
-                if (!input.equals(sqnc[])) {
+                System.out.println("/u000C");
+                if (!input.equals(sqnc[)) {
                     shouldGo = false;
-                } else if (input.equals(sqnc[spot])) {
+                } else if (input.equals(color)) {
                     System.out.println("Correct!");
                     System.out.println(sqnc[spot+1]);
                 }
-                System.out.println("/u000C");
+                
         }
     }
-}
