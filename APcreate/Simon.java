@@ -2,9 +2,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
+
 public class Simon {
-    private String color;
-    String[] sqnc = new String[16];
+    private static String color;
+    int random = (int) (Math.random()*4);
+    static String[] sqnc = new String[16];
     private void generateRandom() {
         String[]colors = new String[4];
         colors[0] = "r";
@@ -14,40 +17,31 @@ public class Simon {
         int random = (int) (Math.random()*4);
         this.color = colors[random];
     }
-    public void generateRandomSequence() {
-        sqnc[0] = color;
-        sqnc[1] = color;
-        sqnc[2] = color;
-        sqnc[3] = color;
-        sqnc[4] = color;
-        sqnc[5] = color;
-        sqnc[6] = color;
-        sqnc[8] = color;
-        sqnc[7] = color;
-        sqnc[9] = color;
-        sqnc[10] = color;
-        sqnc[11] = color;
-        sqnc[12] = color;
-        sqnc[13] = color;
-        sqnc[14] = color;
-        sqnc[15] = color;
-        System.out.println(sqnc);
-    }
 
-    public void main(String[] args) {
-        boolean shouldGo = true;
+    public static void main(String[] args) {
+        ArrayList<Integer> sqnc = new ArrayList<>();
         Scanner input = new Scanner(System.in);
-        while (shouldGo == true) {
-                System.out.println("");
-                System.out.println("Match the pattern: ");
-                System.out.println("/u000C");
-                if (input.equals("r") && (sqnc[0] == "r")) {
+        Random rand = new Random();
+        int next = rand.nextInt(4);
+        boolean go = true;
+        while (go) {
+            System.out.println("Match the pattern: ");
+            System.out.println(color);
+            try{
+                Thread.sleep(2000);
+            } catch (InterruptedException ie) {
+                ie.printStackTrace();
+            }
+            System.out.print('\u000C');
+            for (int i = 0; i < sqnc.size(); i++) {
+                if (input.equals(color)) {
                     System.out.println("Correct!");
-                    
                 }
                 if (!input.equals(color)) {
-                    shouldGo = false;
+                    go = false;
                 }
+            }
+            System.out.print('\u000C');
         }
     }
 }
