@@ -34,19 +34,20 @@ public class Simon {
         System.out.println(sqnc);
     }
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         boolean shouldGo = true;
         Scanner input = new Scanner(System.in);
         while (shouldGo == true) {
                 System.out.println("");
                 System.out.println("Match the pattern: ");
                 System.out.println("/u000C");
-                if (!input.equals(sqnc[)) {
-                    shouldGo = false;
-                } else if (input.equals(color)) {
+                if (input.equals("r") && (sqnc[0] == "r")) {
                     System.out.println("Correct!");
-                    System.out.println(sqnc[spot+1]);
+                    
                 }
-                
+                if (!input.equals(color)) {
+                    shouldGo = false;
+                }
         }
     }
+}
