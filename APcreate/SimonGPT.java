@@ -19,14 +19,14 @@ public class SimonGPT {
                 int button = sequence.get(i);
                 System.out.print(button + " ");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.print("\b\b\b   \b\b\b");
             }
-
-            System.out.println("\nEnter the sequence:");
+            System.out.print('\u000C');
+            System.out.println("Enter the sequence:");
             for (int i = 0; i < sequence.size(); i++) {
                 int button = input.nextInt();
                 if (button != sequence.get(i)) {

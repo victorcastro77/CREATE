@@ -27,21 +27,30 @@ public class Simon {
         while (go) {
             System.out.println("Match the pattern: ");
             System.out.println(color);
-            try{
-                Thread.sleep(2000);
-            } catch (InterruptedException ie) {
-                ie.printStackTrace();
-            }
-            System.out.print('\u000C');
             for (int i = 0; i < sqnc.size(); i++) {
-                if (input.equals(color)) {
-                    System.out.println("Correct!");
+                int button = sqnc.get(i);
+                System.out.print(button + " ");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                if (!input.equals(color)) {
-                    go = false;
-                }
+                System.out.print("\b\b\b   \b\b\b");
             }
             System.out.print('\u000C');
+            System.out.println("Enter the sequence:");
+            for (int i = 0; i < sqnc.size(); i++) {
+                int button = input.nextInt();
+                if (button != sqnc.get(i)) {
+                    System.out.println("Incorrect! Game over.");
+                    go = false;
+                    break;
+                }
+            }
+
+            if (go) {
+                System.out.println("Correct! Next round.");
+            }
         }
     }
 }
